@@ -1,0 +1,74 @@
+@use "./variables";
+
+.detalle {
+    width: 90%;
+    margin: auto;
+
+    &__hero {
+        position: relative;
+        width: 100%;
+        height: 60vh;
+        overflow: hidden;
+
+        &__img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        &__content {
+            position: absolute;
+            bottom: 20%;
+            left: 10%;
+            color: white;
+            text-shadow: 0 2px 6px rgba(0, 0, 0, .6);
+        }
+
+        h2 {
+            color: black;
+            font-size: 2.5rem;
+            margin: 0;
+        }
+    }
+
+    &__video {
+        text-align: center;
+        max-width: 90%;
+        margin-bottom: 30px;
+
+
+    }
+
+    &__articulo {
+        margin-bottom: 40px;
+        color: rgb(93, 95, 121);
+
+        &__texto__detalle {
+            font-size: 0.9rem;
+            line-height: 1.2rem;
+            margin-top: 8px;
+        }
+
+    }
+}
+
+
+/* Diseño para tablets y Ordenadores (> 700 px de ancho)   */
+
+@media screen and (min-width: 700px) {
+
+    .detalle__articulo {
+        display: flex;
+    }
+
+    .detalle__articulo__imagen {
+        flex: 1;
+    }
+
+    .detalle__articulo__texto {
+        flex: 2;
+        margin: auto 0px;
+        padding-left: 10px;
+    }
+
+}

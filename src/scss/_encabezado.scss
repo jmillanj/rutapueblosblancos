@@ -1,0 +1,131 @@
+@use "./variables";
+
+// Estilos del Header
+
+.encabezado {
+    width: 100%;
+    height: 60px;
+    background: rgb(255, 255, 255);
+    position: relative;
+
+    /* Fijamos el menu en 100% ancho */
+    &__menu {
+        position: absolute;
+        top: 60px;
+        width: 100%;
+
+        /* Quitamos estilos por defecto de UL */
+        &__nav-menu {
+            max-height: 0;
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            font-size: 14px;
+        }
+
+        /* Convertimos nuestra lista de enlaces en un menú horizontal */
+        li {
+            display: block;
+            background: variables.$color-texto-primario;
+            text-transform: uppercase;
+            text-align: center;
+            border-bottom: 1px solid #282b30;
+
+            /* Damos estilo a los enlaces */
+            a {
+                display: block;
+                color: rgb(255, 255, 255);
+                text-decoration: none;
+                font-weight: 600;
+                line-height: 60px;
+                padding: 0 26px;
+
+                &:hover {
+                    color: variables.$color-texto-secundario;
+                }
+            }
+        }
+
+        /* Agregamos una animación al despliegue del menú */
+        &__open-menu {
+            box-shadow: 0 1px 2px rgba(0, 0, 0, .5);
+            max-height: 400px;
+            transition: max-height .4s ease;
+        }
+
+
+        /* Botón mostrar menú */
+        &__nav-mobile {
+            background: transparent;
+            border: 0;
+            cursor: pointer;
+            float: right;
+            width: 60px;
+            height: 60px;
+            position: absolute;
+            right: 0;
+            top: -60px;
+            opacity: 0.6;
+
+            /* Agregaremos esta clase a nav-mobile, cuando el menu mobile haya sido desplegado */
+            &__nav-open {
+                opacity: 1;
+            }
+
+            span {
+                display: block;
+                width: 60%;
+                margin: 4px auto;
+                height: 4px;
+                background: variables.$color-texto-primario;
+            }
+        }
+
+    }
+
+}
+
+/* Diseño para tablets u Ordenadores (> 700 px de ancho)   */
+
+@media only screen and (min-width: 700px) {
+
+    /* Ocultamos botón nav-mobile */
+    .encabezado__menu__nav-mobile {
+        display: none;
+    }
+
+    /* Flotamos el nav a la derecha */
+    .encabezado__menu {
+        width: auto;
+        float: right;
+        top: 0;
+        position: relative;
+
+        &__open-menu {
+            box-shadow: none;
+        }
+
+        /* Hacemos reset de max-height */
+        ul {
+            max-height: inherit;
+        }
+
+        /* Alineamos las opciones de forma horizontal */
+        li {
+            float: left;
+            border: 0;
+            background: transparent;
+
+            a {
+                display: block;
+                color: variables.$color-texto-primario;
+                padding: 0 26px;
+
+                &:hover {
+                    color: variables.$color-texto-secundario;
+                }
+            }
+        }
+    }
+}

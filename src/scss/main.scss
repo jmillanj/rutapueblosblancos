@@ -1,0 +1,27 @@
+@use "./variables";
+@use "./encabezado";
+@use "./portada";
+@use "./footer";
+@use "./categoria";
+@use "./detalle";
+
+// Resets iniciales
+
+body {
+    margin: 0;
+    font-family: variables.$fuentes-base;
+    color: variables.$color-texto-primario;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1,
+h2 {
+    text-align: center;
+}

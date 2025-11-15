@@ -1,0 +1,79 @@
+// Estilos de la Página de Categorías
+
+.categorias {
+    width: 95%;
+    margin: auto;
+
+    &__intro {
+        background-color: rgb(223, 222, 222);
+        border-radius: 10px;
+        width: 85%;
+        margin: auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding: 25px;
+        text-align: justify;
+    }
+
+    &__container {
+        margin: 20px 0px 70px 0px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        &__categoria {
+            width: 100%;
+            margin-top: 5px;
+
+            img {
+                border-radius: 5px;
+            }
+
+            &__nombre {
+                text-align: center;
+                font-weight: 700;
+            }
+        }
+
+        a:link,
+        a:visited {
+            color: rgb(93, 95, 121);
+        }
+
+        a:hover {
+            color: rgb(245, 157, 35);
+        }
+
+    }
+
+}
+
+
+/* Diseño para tablets (> 700 px de ancho)   */
+
+@media screen and (min-width: 700px) {
+
+
+    .categorias__container__categoria {
+        width: 45%;
+        text-align: left;
+        margin-bottom: 30px;
+
+
+        &__nombre {
+            font-size: 0.9rem;
+        }
+    }
+}
+
+
+/* Diseño para ordenadores (> 1200 px de ancho)   */
+
+@media screen and (min-width: 1200px) {
+    .categorias__container__categoria {
+        width: 23%;
+        text-align: left;
+        margin-bottom: 30px;
+    }
+}

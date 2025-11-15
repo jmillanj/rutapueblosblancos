@@ -1,0 +1,30 @@
+@use "./variables";
+
+// Estilos Página de Inicio
+
+.hero {
+    background: url('../images/Portada.jpg') center/cover no-repeat;
+    color: white;
+    text-align: center;
+    padding: 10rem 2rem;
+
+    &__content {
+        background: rgba(0, 0, 0, 0.4);
+        display: inline-block;
+        padding: 2rem;
+        border-radius: 10px;
+
+        &__btn {
+            background: variables.$color-texto-primario;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+
+            &:hover {
+                background: variables.$color-texto-secundario;
+            }
+        }
+    }
+}
