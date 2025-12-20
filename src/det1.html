@@ -1,83 +1,85 @@
 <!doctype html>
 <html lang="es">
-  <head>
+<head>
     <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-    <title>La ruta de los pueblos blancos de Cádiz</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Arcos de la Frontera | La Ruta de los Pueblos Blancos</title>
     <link rel="stylesheet" href="scss/main.scss"/>
     <script type="module" src="js/app.js"></script>
-  </head>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
 
-  <body>
-    
     <include src="src/header.html"></include>
 
-    <main class="detalle">
-        <section>
-            <div class="detalle__hero">
-                <img src="images/Arcos_Frontera.jpg" alt="Paisaje de Arcos de la Frontera" class="detalle__img">
+    <main id="main-content" class="detalle">
+        <section class="detalle__hero">
+            <picture>
+                <source media="(min-width: 1024px)" srcset="images/Arcos_Frontera.jpg?as=avif&width=1600">
+                <source media="(min-width: 768px)" srcset="images/Arcos_Frontera.jpg?as=webp&width=1024">
+                <source media="(max-width: 767px)" srcset="images/Arcos_Frontera_mobile.jpg?as=webp&width=600&height=400&fit=cover">
+                <img src="images/Arcos_Frontera.jpg" alt="Panorámica completa de Arcos de la Frontera" class="detalle__hero-img">
+            </picture>
+            <div class="detalle__hero-title">
+                <h1>Arcos de la Frontera</h1>
             </div>
         </section>
-   
-        <h2>Arcos de la Frontera</h2>
 
-        <section>
-            <div class="detalle__articulo">
+        <section class="detalle__container">
+            <article class="detalle__articulo">
                 <div class="detalle__articulo__imagen">
-                    <img src="images/Arcos1.jpg" alt="Paisaje de Arcos">
+                    <img srcset="images/Arcos1.jpg?as=webp&width=400 400w, 
+                                 images/Arcos1.jpg?as=webp&width=800 800w"
+                         sizes="(max-width: 768px) 90vw, 450px"
+                         src="images/Arcos1.jpg?width=450" 
+                         alt="Callejón típico de cal blanca en el centro histórico">
                 </div>
                 <div class="detalle__articulo__texto">
-                    <div class="detalle__articulo__texto__detalle">
-                        <p>Asentada sobre una espectacular peña cortada, Arcos de la Frontera es una pintoresca villa gaditana plagada de rincones que rememoran su herencia árabe.</p>
-                        <p>Su casco antiguo está declarado Bien de Interés Cultural. Torres, iglesias y espléndidos miradores con vistas al río Guadalete son sólo algunos de los innumerables atractivos que ofrece esta localidad, inmersa en plena ruta de los Pueblos Blancos. Pero Arcos es también un lugar donde las tradiciones se conservan con fidelidad, como puede apreciarse en sus fiestas, como la Semana Santa, o su gastronomía, donde el cerdo ibérico y los productos de la huerta son protagonistas.</p>
-                        <p>Habitada desde la Prehistoria, fueron los árabes en la Edad Media quienes convirtieron la Medina Ar-kosch en una importante plaza defensiva. Posteriormente, su valor estratégico hizo que llegara a ser capital de un reino de Taifas. Este pasado árabe ha dejado en Arcos de la Frontera un entramado urbano de calles estrechas y empinadas asentadas sobre un promontorio rocoso a cuyos pies serpentea el río Guadalete.</p>
-                    </div>
+                    <p>Asentada sobre una espectacular peña cortada, Arcos de la Frontera es una pintoresca villa gaditana plagada de rincones que rememoran su herencia árabe. Su casco antiguo está declarado Bien de Interés Cultural.</p>
                 </div>
-            </div>
-        
-            <div class="detalle__articulo">
-                <div class="detalle__articulo__imagen">
-                    <img src="images/Arcos2.jpg" alt="Paisaje de Arcos">
-                </div>
-                <div class="detalle__articulo__texto">
-                    <div class="detalle__articulo__texto__detalle">
-                        <p>El casco histórico, que cobija una gran riqueza monumental, se extiende entre la Cuesta de Belén y la Puerta Matrona, único acceso que pervive de la antigua muralla árabe.</p>
-                        <p>En pleno centro se localiza la plaza del Cabildo. Este espacio concentra algunos de los edificios más notables de la ciudad, como el Ayuntamiento y el Castillo Ducal, fortaleza musulmana reconstruida en el siglo XV. Frente a ellos se alza el Parador de Turismo, ubicado en la antigua Casa del Corregidor. Paredes encaladas, rejas y azulejos son algunos de los elementos característicos del edificio, cuya arquitectura típica andaluza queda perfectamente integrada en el caserío arcense. Antes de abandonar la plaza, el visitante podrá acceder a uno de los numerosos miradores de la localidad, que ofrecen una impresionante panorámica de los alrededores.</p>
-                        <p>Dentro de la arquitectura religiosa, merece especial atención la Basílica de Santa María de la Asunción (siglos XIII-XIV), templo con fachada gótico plateresca y torre neoclásica. Tanto el edificio como el bello órgano que cobija en su interior se encuentran declarados monumento Histórico-Artístico. Otras iglesias destacadas son la de San Pedro, con fachada y torre de estilo barroco, y la de San Miguel, edificio utilizado en la actualidad como sala de conferencias y exposiciones.</p>
-                    </div>
-                </div>
-            </div>
+            </article>
 
-            <div class="detalle__articulo">
+            <article class="detalle__articulo detalle__articulo--reverse">
                 <div class="detalle__articulo__imagen">
-                    <img src="images/Arcos3.jpg" alt="Paisaje de Arcos">
+                    <img srcset="images/Arcos2.jpg?as=webp&width=400 400w, 
+                                 images/Arcos2.jpg?as=webp&width=800 800w"
+                         sizes="(max-width: 768px) 90vw, 450px"
+                         src="images/Arcos2.jpg?width=450" 
+                         alt="Plaza del Cabildo y Castillo Ducal">
                 </div>
                 <div class="detalle__articulo__texto">
-                    <div class="detalle__articulo__texto__detalle">
-                        <p>Entre los siglos XV y XVIII se instalaron en Arcos de la Frontera numerosas órdenes religiosas, hecho que tiene su reflejo en varias construcciones, como el convento de la Encarnación (s. XVI), el de la Caridad (s. XVIII) o el hospital de San Juan de Dios (s. XVI).</p>
-                        <p>Y a lo largo de todo el recorrido, el casco histórico mostrará al visitante la belleza de la arquitectura tradicional regional, con sencillas casas de muros encalados que abren sus puertas para exhibir sus floridos patios interiores. Durante el recorrido, aparecerán también algunas casas solariegas, como el palacio del Conde del Águila (s. XV), auténtica joya que fusiona las tradiciones tardogótica y mudéjar.</p>
-                    </div>
+                    <p>El casco histórico se extiende entre la Cuesta de Belén y la Puerta Matrona, único acceso que pervive de la antigua muralla árabe. En pleno centro se localiza la plaza del Cabildo, rodeada de edificios notables.</p>
                 </div>
-            </div>
+            </article>
+
+            <article class="detalle__articulo">
+                <div class="detalle__articulo__imagen">
+                    <img srcset="images/Arcos3.jpg?as=webp&width=400 400w, 
+                                 images/Arcos3.jpg?as=webp&width=800 800w"
+                         sizes="(max-width: 768px) 90vw, 450px"
+                         src="images/Arcos3.jpg?width=450" 
+                         alt="Interior de un patio andaluz con flores">
+                </div>
+                <div class="detalle__articulo__texto">
+                    <p>Entre los siglos XV y XVIII se instalaron numerosas órdenes religiosas, reflejado en templos como la Basílica de Santa María de la Asunción, joya del gótico plateresco y Bien de Interés Cultural.</p>
+                </div>
+            </article>
         </section>
 
         <section class="detalle__video">
-            <h3>Descubre Arcos de la Frontera</h3>
-           <iframe
-                width="560" height="315"
-                src="https://www.youtube.com/embed/Wk2WsDkHoIo?si=yhlmnNyRjT5DcNbX"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen>
-            </iframe>
+            <h3>Descubre Arcos en movimiento</h3>
+            <div class="detalle__video-wrapper">
+                <iframe
+                    src="https://www.youtube.com/embed/Wk2WsDkHoIo"
+                    title="Vídeo promocional de Arcos de la Frontera"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
         </section>
-    
     </main>
 
     <include src="src/footer.html"></include>
-
-  </body>
-
+</body>
 </html>

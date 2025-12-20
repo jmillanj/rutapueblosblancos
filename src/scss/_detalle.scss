@@ -1,74 +1,139 @@
-@use "./variables";
+@use "variables";
 
 .detalle {
-    width: 90%;
-    margin: auto;
+    animation: fadeInPage 0.8s ease-in;
 
     &__hero {
         position: relative;
         width: 100%;
-        height: 60vh;
+        height: auto;
         overflow: hidden;
+        line-height: 0;
 
-        &__img {
+        img {
             width: 100%;
-            height: 100%;
-            object-fit: cover;
+            height: auto;
+            display: block;
+            object-fit: initial;
+            transition: transform 10s linear;
         }
 
-        &__content {
+        &:hover img {
+            transform: scale(1.05);
+        }
+
+        &-title {
             position: absolute;
-            bottom: 20%;
-            left: 10%;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
             color: white;
-            text-shadow: 0 2px 6px rgba(0, 0, 0, .6);
+            padding: 2rem 1rem;
+            text-align: center;
+            box-sizing: border-box;
+
+            h1 {
+                margin: 0;
+                font-size: clamp(1.5rem, 5vw, 4rem); // Tamaño fluido que se adapta solo
+                text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+            }
+        }
+    }
+
+    &__container {
+        max-width: 1000px;
+        margin: 3rem auto;
+        padding: 0 1.5rem;
+    }
+
+    &__articulo {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        margin-bottom: 4rem;
+        align-items: center;
+
+        transition: transform 0.3s ease;
+
+        &:hover {
+            transform: translateY(-5px);
         }
 
-        h2 {
-            color: black;
-            font-size: 2.5rem;
-            margin: 0;
+        &__imagen {
+            width: 100%;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+
+            img {
+                width: 100%;
+                display: block;
+                transition: filter 0.3s ease;
+            }
+        }
+
+        &__texto {
+            flex: 1;
+
+            p {
+                font-size: 1.1rem;
+                line-height: 1.7;
+                color: #444;
+            }
+        }
+
+        @media (min-width: 768px) {
+            flex-direction: row;
+
+            &--reverse {
+                flex-direction: row-reverse;
+            }
+
+            &__imagen {
+                flex: 1;
+            }
+
+            &__texto {
+                flex: 1;
+            }
         }
     }
 
     &__video {
+        background-color: #f9f9f9;
+        padding: 4rem 1.5rem;
         text-align: center;
-        max-width: 90%;
-        margin-bottom: 30px;
 
-
-    }
-
-    &__articulo {
-        margin-bottom: 40px;
-        color: rgb(93, 95, 121);
-
-        &__texto__detalle {
-            font-size: 0.9rem;
-            line-height: 1.2rem;
-            margin-top: 8px;
+        h3 {
+            margin-bottom: 2rem;
+            color: variables.$color-texto-primario;
         }
 
+        &-wrapper {
+            max-width: 800px;
+            margin: 0 auto;
+            aspect-ratio: 16 / 9;
+
+            iframe {
+                width: 100%;
+                height: 100%;
+                border-radius: 10px;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            }
+        }
     }
 }
 
 
-/* Diseño para tablets y Ordenadores (> 700 px de ancho)   */
-
-@media screen and (min-width: 700px) {
-
-    .detalle__articulo {
-        display: flex;
+@keyframes fadeInPage {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
     }
 
-    .detalle__articulo__imagen {
-        flex: 1;
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
-
-    .detalle__articulo__texto {
-        flex: 2;
-        margin: auto 0px;
-        padding-left: 10px;
-    }
-
 }

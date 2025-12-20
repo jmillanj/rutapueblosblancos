@@ -13,9 +13,34 @@
     <include src="src/header.html"></include>
     
     <main class="hero">
+      
+      <picture class="hero__background">
+        <source media="(min-width: 1024px)" srcset="images/Portada_wide.jpg?as=avif&width=1600">
+        <source media="(max-width: 767px)" srcset="images/Portada_mobile.jpg?as=webp&width=600&height=800&fit=cover">
+        <img src="images/Portada.jpg?width=1000" alt="Paisaje de los pueblos blancos" class="hero__background__img">
+      </picture>
+
       <section class="hero__content">
+
+        <div class="hero__content__icon">
+          <svg viewBox="0 0 100 100" class="sun-icon">
+            <circle cx="50" cy="50" r="20" fill="#f59d23" />
+            <g stroke="#f59d23" stroke-width="4">
+              <line x1="50" y1="10" x2="50" y2="25" />
+              <line x1="50" y1="75" x2="50" y2="90" />
+              <line x1="10" y1="50" x2="25" y2="50" />
+              <line x1="75" y1="50" x2="90" y2="50" />
+            </g>
+          </svg>
+        </div>
+
         <h1>La ruta de los pueblos blancos de Cadiz</h1>
         <p>Descubre culturas, paisajes y experiencias únicas que cambiarán tu forma de ver la vida.</p>
+
+        <div class="hero__content__clip-box">
+          <img src="images/Portada.jpg?as=webp&width=400" alt="Detalle decorativo" class="img-polygon">
+        </div>
+
         <a href="categoria.html" class="hero__content__btn">Ver Pueblos de la Ruta</a>
       </section>
     </main>

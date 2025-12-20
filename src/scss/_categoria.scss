@@ -1,4 +1,4 @@
-// Estilos de la Página de Categorías
+@use "variables";
 
 .categorias {
     width: 95%;
@@ -25,9 +25,27 @@
         &__categoria {
             width: 100%;
             margin-top: 5px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            overflow: hidden;
+            border-radius: 8px;
+
+            &:hover {
+                transform: translateY(-8px);
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            }
 
             img {
-                border-radius: 5px;
+                width: 100%;
+                height: auto;
+                display: block;
+
+                transition: filter 0.3s ease, scale 0.3s ease;
+                filter: brightness(0.9);
+            }
+
+            &:hover img {
+                filter: brightness(1.1);
+                scale: 1.05;
             }
 
             &__nombre {
@@ -51,10 +69,7 @@
 
 
 /* Diseño para tablets (> 700 px de ancho)   */
-
 @media screen and (min-width: 700px) {
-
-
     .categorias__container__categoria {
         width: 45%;
         text-align: left;
@@ -69,7 +84,6 @@
 
 
 /* Diseño para ordenadores (> 1200 px de ancho)   */
-
 @media screen and (min-width: 1200px) {
     .categorias__container__categoria {
         width: 23%;

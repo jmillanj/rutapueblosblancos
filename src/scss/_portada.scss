@@ -1,18 +1,52 @@
-@use "./variables";
-
-// Estilos Página de Inicio
+@use "variables";
 
 .hero {
-    background: url('../images/Portada.jpg') center/cover no-repeat;
+    position: relative;
+    height: 80vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: white;
     text-align: center;
-    padding: 10rem 2rem;
+    padding: 8rem 2rem;
+
+    h1 {
+        margin: 5px;
+        font-size: 1.3rem;
+    }
+
+    &__background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+
+        &__img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
 
     &__content {
         background: rgba(0, 0, 0, 0.4);
-        display: inline-block;
-        padding: 2rem;
+        padding: 1rem;
         border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 90%;
+        max-width: 800px;
+
+        @media screen and (min-width: 1024px) {
+            h1 {
+                font-size: 2rem;
+            }
+        }
 
         &__btn {
             background: variables.$color-texto-primario;
@@ -26,5 +60,29 @@
                 background: variables.$color-texto-secundario;
             }
         }
+    }
+
+    .sun-icon {
+        width: 80px;
+        animation: rotateSun 5s linear infinite;
+    }
+
+    .img-polygon {
+        clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+        transition: clip-path 0.6s ease-in-out;
+
+        &:hover {
+            clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+        }
+    }
+}
+
+@keyframes rotateSun {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
     }
 }
