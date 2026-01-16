@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Arcos de la Frontera | La Ruta de los Pueblos Blancos</title>
     <link rel="stylesheet" href="scss/main.scss"/>
-    <script type="module" src="js/app.js"></script>
+    <script type="module" defer src="js/app.js"></script>
     <link rel="icon" href="favicon.ico">
 </head>
 <body>
@@ -44,7 +44,8 @@
                     <img srcset="images/Arcos2.jpg?as=webp&width=400 400w, 
                                  images/Arcos2.jpg?as=webp&width=800 800w"
                          sizes="(max-width: 768px) 90vw, 450px"
-                         src="images/Arcos2.jpg?width=450" 
+                         src="images/Arcos2.jpg?width=450"
+                         loading="lazy"
                          alt="Plaza del Cabildo y Castillo Ducal">
                 </div>
                 <div class="detalle__articulo__texto">
@@ -57,7 +58,8 @@
                     <img srcset="images/Arcos3.jpg?as=webp&width=400 400w, 
                                  images/Arcos3.jpg?as=webp&width=800 800w"
                          sizes="(max-width: 768px) 90vw, 450px"
-                         src="images/Arcos3.jpg?width=450" 
+                         src="images/Arcos3.jpg?width=450"
+                         loading="lazy"
                          alt="Interior de un patio andaluz con flores">
                 </div>
                 <div class="detalle__articulo__texto">
