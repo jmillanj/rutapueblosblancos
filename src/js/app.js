@@ -1,11 +1,3 @@
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-
-// Inicializar animaciones
-AOS.init({
-    duration: 800,
-    once: true,
-});
 
 // Menú hamburguesa para dispositivos móviles
 const buttonMenu = document.querySelector('.encabezado__menu__nav-mobile');
